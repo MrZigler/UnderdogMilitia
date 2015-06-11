@@ -1,12 +1,18 @@
 
+
+import random
+
 class Livingbeing():
     
-    def __init__(self, name, health, armor, inventory):
+    def __init__(self, name, health, armor, mindset, emotion, skills, inventory):
         self.name = name
         self.health = health
         self.armor = armor
+        self.mindset = mindset
+        self.emotion = emotion
+        self.skills = skills
         self.inventory = inventory
-        self.hunger = 0
+        self.hunger = random.randrange(1, 5)
         self.thirst = 0
         
         
@@ -17,24 +23,7 @@ class Livingbeing():
         
         
         
-#create a player
-playerx = Livingbeing('Platinum Falcon', 72, 5, {})
 
-
-
-dogs = 1
-
-while dogs < 9:
-
-
-    dmbgz = int(input('damage: '))
-    playerx.takeDamage(dmbgz)
-
-    print(playerx.health)
-    
-    dogs += 1
-    
-else:
     quit()
     
     
